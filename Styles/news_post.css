@@ -1,0 +1,98 @@
+body {
+  align-items: center;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--color-links);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a:active {
+  color: var(--color-accent);
+}
+
+#prevPost {
+  text-align: left;
+}
+
+.back-link {
+  text-align: center;
+}
+
+#nextPost {
+  text-align: right;
+}
+
+.date-author {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin: 0.5rem 0;
+}
+
+.kurzbeschreibung {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+.content table {
+  border-collapse: collapse;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.content table, .content th, .content td {
+  border: 1px solid #999;
+}
+
+.content th, .content td {
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.wp-block-table {
+  margin: 0;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.wp-block-image,
+.wp-block-image img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 800px)  {
+  main {
+    width: 95%;
+  }
+}

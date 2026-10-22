@@ -1,0 +1,273 @@
+body {
+    background-color: var(--color-background);
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive container with max width 1400px and min margin 10px */
+.tournaments-container {
+    margin: 10px auto;
+    width: 95%;
+    max-width: 1400px;        /* Card will never exceed 1400px */
+    min-width: 0;             /* Large screens: 12% padding on sides */
+    box-sizing: border-box;
+}
+
+/* Heading container */
+.tournaments-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.tournaments-heading-container h2 {
+    display: inline-block;
+    margin: 0;
+}
+
+.placeholder {
+    padding: 10px 20px;
+    margin-left: 20px;
+    opacity: 0;
+    display: inline-block;
+}
+
+.news-button {
+    font-size: large;
+    padding: 10px 20px;
+    border-style: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.news-button:active {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.news-button:hover {
+    color: var(--color-accent);
+}
+
+/* Tab styles */
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: var(--color-middle-gray);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: var(--color-light-gray);
+}
+
+/* Content container */
+.content-container {
+    background-color: var(--color-light-gray);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    margin: 0 5px;
+    min-height: 750px;
+}
+
+.tab-content {
+    display: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tab-content h2 a {
+    color: inherit;
+}
+
+.tab-content h2 a:hover {
+    color: var(--color-primary);
+}
+
+/* Table grid: left flexible, right fits content */
+.table-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+/* Stadtmeisterschaft: left flexible, middle fits content, right fits content */
+.grid-stadtmeisterschaft {
+    display: grid;
+    grid-template-columns: auto auto auto; /* left flexible, middle shrinks to content, right fits content */
+    gap: 20px;
+    align-items: start;
+}
+
+/* Make left and middle scrollable if content too wide */
+.table-grid > div:first-child,
+.grid-stadtmeisterschaft > div:first-child,
+.grid-stadtmeisterschaft > div:nth-child(2) {
+    overflow-x: auto;      
+    max-width: 100%;       
+}
+
+/* Table wrapper */
+.table-wrapper {
+    display: inline-block;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;            
+    background-color: var(--color-background);
+}
+
+th, td {
+    border: 1px solid var(--color-middle-gray);
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background-color: var(--color-middle-gray);
+}
+
+
+.events-container {
+    text-align: left;
+}
+
+.events-container h3 {
+    display: inline-block;
+    margin-left: 8rem;
+}
+
+.events-container button {
+    margin-left: 8rem;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list ul {
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.events-list li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-light-gray);
+    padding: 8px 5px;
+    font-size: 0.9rem;
+    overflow: hidden;
+}
+
+.events-list li:hover {
+    background-color: rgba(255, 230, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.events-list li .time {
+    color: var(--color-dark-gray);
+    font-size: 0.85rem;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.events-list li .title {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 1200px) {
+    .grid-stadtmeisterschaft {
+        grid-template-columns: auto auto;
+    }
+
+    .events-container {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .tournaments-heading-container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .placeholder {
+        display: none;
+    }
+    .news-button {
+        margin-bottom: 20px;
+    }
+    .tournaments-container {
+        margin: 10px 10px;
+        padding: 0;
+    }
+    .tab-container {
+        flex-direction: column;
+        margin: 0;
+    }
+    .tab {
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+    .content-container {
+        margin: 0;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .table-grid,
+    .grid-stadtmeisterschaft {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    table {
+        font-size: 12px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    th, td {
+        padding: 3px 5px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .events-container {
+        text-align: center;
+    }
+
+    .events-list ul {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termine</title>
+  <meta name="description" content="Übersicht und Kalender der bevorstehenden Termine und Veranstaltungen.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png">
+  <link rel="manifest" href="/Icons/site.webmanifest">
+  <link rel="canonical" href="https://schachunion-schorndorf.de/Sites/termine.html" />
+  <link rel="stylesheet" href="/Styles/variablen.css">
+  <link rel="stylesheet" href="/Styles/termine.css">
+  <link rel="stylesheet" href="/Styles/loader.css">
+  <link rel="stylesheet" href="/Styles/header.css">
+  <link rel="stylesheet" href="/Styles/footer.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/index.html">
+        <picture>
+          <source srcset="/Icons/headerlogo_dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/Icons/headerlogo.png" alt="Schachunion Schorndorf" class="headerlogo">
+        </picture>
+      </a>
+    </div>
+    <div class="header-right">
+      <nav class="navigation">
+        <button class="menu-button"></button>
+        <ul class="navigation-content">
+          <li class="header-titles"><a href="/Sites/news.html">News</a></li>
+          <li class="header-titles"><a href="/Sites/mannschaften.html">Mannschaften</a></li>
+          <li class="header-titles"><a href="/Sites/turniere.html">Turniere</a></li>
+          <li class="header-titles"><a href="/Sites/verein.html">Verein</a></li>
+          <li class="header-titles"><a href="/Sites/termine.html">Termine</a></li>
+          <li class="menu">
+            <ul>
+              <li><a href="/Sites/hall.html">Hall Of Fame</a></li>
+              <li><a href="/Sites/archiv.html">Archiv</a></li>
+              <li><a href="/Sites/impressum.html">Impressum</a></li>
+              <li><a href="/Sites/extern.html">Externe Links</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="termine-container">
+      <div class="calendar-wrapper">
+        <div class="calendar-nav">
+          <button id="prevMonth">&lt;</button>
+          <div>
+            <button id="monthYear"></button>
+          </div>
+          <button id="nextMonth">&gt;</button>
+        </div>
+        <div id="calendar-loader" class="loader-svg">
+          <svg class="container" viewBox="0 0 35 35" height="35" width="35">
+            <rect class="track" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5"/>
+            <rect class="car" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5" pathlength="100"/>
+          </svg>
+        </div>
+        <div id="calendar"></div>
+      </div>
+      <div class="termine-list-wrapper">
+        <h2>Nächste Termine:</h2>
+        <div class="pagination">
+          <button id="prevPage">Vorherige</button>
+          <button id="nextPage">Nächste</button>
+        </div>
+        <div id="calendar-list-loader" class="loader-svg">
+          <svg class="container" viewBox="0 0 35 35" height="35" width="35">
+            <rect class="track" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5"/>
+            <rect class="car" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5" pathlength="100"/>
+          </svg>
+        </div>
+        <ul id="termineList" class="termine-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  
+
+  <footer>
+    <div class="footer-left">
+      <p>Kontakt:<span class="line-break"> </span><a id="contact-email" href="#"></a></p>
+    </div>
+    <div class="footer-right">
+      <a href="/Sites/impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="/Scripts/header.js"></script>
+  <script src="/Scripts/config.js"></script>
+  <script type="module" src="/Scripts/termine.js"></script>
+</body>
+</html>

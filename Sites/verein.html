@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verein</title>
+  <meta name="description" content="Über uns: Informationen zu Verein und Mitgliedschaft.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png">
+  <link rel="manifest" href="/Icons/site.webmanifest">
+  <link rel="canonical" href="https://schachunion-schorndorf.de/Sites/verein.html" />
+  <link rel="stylesheet" href="/Styles/variablen.css">
+  <link rel="stylesheet" href="/Styles/verein.css">
+  <link rel="stylesheet" href="/Styles/header.css">
+  <link rel="stylesheet" href="/Styles/footer.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/index.html">
+        <picture>
+          <source srcset="/Icons/headerlogo_dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/Icons/headerlogo.png" alt="Schachunion Schorndorf" class="headerlogo">
+        </picture>
+      </a>
+    </div>
+    <div class="header-right">
+      <nav class="navigation">
+        <button class="menu-button"></button>
+        <ul class="navigation-content">
+          <li class="header-titles"><a href="/Sites/news.html">News</a></li>
+          <li class="header-titles"><a href="/Sites/mannschaften.html">Mannschaften</a></li>
+          <li class="header-titles"><a href="/Sites/turniere.html">Turniere</a></li>
+          <li class="header-titles"><a href="/Sites/verein.html">Verein</a></li>
+          <li class="header-titles"><a href="/Sites/termine.html">Termine</a></li>
+          <li class="menu">
+            <ul>
+              <li><a href="/Sites/hall.html">Hall Of Fame</a></li>
+              <li><a href="/Sites/archiv.html">Archiv</a></li>
+              <li><a href="/Sites/impressum.html">Impressum</a></li>
+              <li><a href="/Sites/extern.html">Externe Links</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="verein-container">
+      <h1>Spielabend</h1>
+      <p>
+        Unser Spielabend findet jeden Mittwoch in der Mensa der Fuchshofschule statt.<br/><br/>
+        <strong>Kinder- und Jugendschach:</strong> ab 17:00 Uhr <br/>
+        <strong>Allgemeiner Spielabend:</strong> ab 19:00 Uhr <br/>
+      </p>
+
+      <h1>Spiellokal</h1>
+      <p>Unser Spielabend sowie unsere Ligaspiele finden in der Mensa der Fuchshofschule statt.</p>
+      <p>
+        <strong>Adresse:</strong><br/>
+        Silcherstraße 91-95 <br/> 
+        (Die Mensa befindet sich auf der hinteren Seite des Schulgeländes)<br/>
+        73614 Schorndorf
+      </p>
+
+      <div id="map"></div>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script>
+        var lat = 48.79631725095799;
+        var lng = 9.52307062011962;
+
+        var map = L.map('map').setView([lat, lng], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([lat, lng]).addTo(map)
+          .bindPopup('<img style="height: 50px;" src="/Icons/logo_ohne_text.png" alt=""><br><b>Vereinslokal</b><br>Hier treffen wir uns!').openPopup();
+      </script>
+
+      <h2>Anfahrt und Parken</h2>
+      <img class="map-img" src="/Icons/anfahrskizze.png" alt="Anfahrskizze">
+    
+      <h1>Mitgliedsbeiträge</h1>
+      <p>Die Mitgliedsbeiträge belaufen sich auf jährlich</p>
+      <ul>
+        <li>10€ für Kinder und Jugendliche</li>
+        <li>20€ für Menschen mit Behinderung, Rentner, Schüler, Arbeitslose und passive Mitglieder</li>
+        <li>35€ für aktive Mitglieder</li>
+      </ul>
+      <p>Die Beiträge werden per Überweisung bezahlt.</p>
+      <p>Bankverbindung:</p>
+      <p>
+        Volksbank <br/>
+        SchachUnion Schorndorf e.V. <br/>
+        IBAN: DE 45 6009 0100 0595 4070 05 <br/>
+        BIC: VOBADESS <br/>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>Kontakt:<span class="line-break"> </span><a id="contact-email" href="#"></a></p>
+    </div>
+    <div class="footer-right">
+      <a href="/Sites/impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="/Scripts/header.js"></script>
+</body>
+</html>

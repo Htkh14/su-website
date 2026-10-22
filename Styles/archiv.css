@@ -1,0 +1,139 @@
+body {
+  align-items: center;
+}
+
+
+main {
+  max-width: 800px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.news-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+#news-filter {
+  border-style: none;
+  border-radius: 5px;
+  background-color: var(--color-light-gray);
+  font-size: large;
+  cursor: pointer;
+  padding: 2px;
+}
+
+#news-filter:focus, #news-filter:focus-visible {
+  outline: none;
+}
+
+/* News Liste */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  border-bottom: 1px solid var(--color-light-gray);
+  padding: 10px 0;
+}
+
+.news-list li .date {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.news-list li h3 {
+  margin: 0 0 4px 0;
+}
+
+.news-list li .excerpt {
+  margin-bottom: 6px;
+}
+
+.news-list li .read-more {
+  color: var(--color-links);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-list li .read-more:hover {
+  text-decoration: underline;
+}
+
+.news-list li .read-more:active {
+  color: var(--color-accent);
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.pagination button {
+  background-color: var(--color-primary, #0066cc);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  color: var(--color-accent);
+}
+
+.pagination button:active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  color: white;
+  cursor: default;
+}
+
+.old-site {
+    font-size: large;
+    padding: 10px 20px;
+    border-style: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.old-site:active {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.old-site:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 800px)  {
+  main {
+    width: 95%;
+  }
+
+  #news-header {
+    flex-direction: column;
+  }
+}

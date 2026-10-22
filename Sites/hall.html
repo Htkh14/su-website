@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hall of Fame</title>
+  <meta name="description" content="Hall of Fame der Schachunion Schorndorf. Ehrungen und Auszeichnungen unserer Mitglieder und Erfolge.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png">
+  <link rel="manifest" href="/Icons/site.webmanifest">
+  <link rel="canonical" href="https://schachunion-schorndorf.de/Sites/hall.html" />
+  <link rel="stylesheet" href="/Styles/variablen.css">
+  <link rel="stylesheet" href="/Styles/hall.css">
+  <link rel="stylesheet" href="/Styles/header.css">
+  <link rel="stylesheet" href="/Styles/footer.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/index.html">
+        <picture>
+          <source srcset="/Icons/headerlogo_dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/Icons/headerlogo.png" alt="Schachunion Schorndorf" class="headerlogo">
+        </picture>
+      </a>
+    </div>
+    <div class="header-right">
+      <nav class="navigation">
+        <button class="menu-button"></button>
+        <ul class="navigation-content">
+          <li class="header-titles"><a href="/Sites/news.html">News</a></li>
+          <li class="header-titles"><a href="/Sites/mannschaften.html">Mannschaften</a></li>
+          <li class="header-titles"><a href="/Sites/turniere.html">Turniere</a></li>
+          <li class="header-titles"><a href="/Sites/verein.html">Verein</a></li>
+          <li class="header-titles"><a href="/Sites/termine.html">Termine</a></li>
+          <li class="menu">
+            <ul>
+              <li><a href="/Sites/hall.html">Hall Of Fame</a></li>
+              <li><a href="/Sites/archiv.html">Archiv</a></li>
+              <li><a href="/Sites/impressum.html">Impressum</a></li>
+              <li><a href="/Sites/extern.html">Externe Links</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <h1>Hall of Fame</h1>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="card">
+          <img src="/Icons/stadtmeisterschaft.png" alt="Stadtmeisterschaft">
+          <ul id="stadtmeisterschaft"></ul>
+        </div>
+        <div class="card">
+          <img src="/Icons/vereinspokal.png" alt="Vereinspokal">
+          <ul id="vereinspokal"></ul>
+        </div>
+        <div class="card">
+          <img src="/Icons/schach960.png" alt="Schach-960-Turniere">
+          <ul id="schach960"></ul>
+        </div>
+        <div class="card">
+          <img src="/Icons/tandem.png" alt="Tandemturniere">
+          <ul id="tandem"></ul>
+        </div>
+        <div class="card">
+          <img src="/Icons/blitz.png" alt="Blitzschachturniere">
+          <ul id="blitz"></ul>
+        </div>
+        <div class="card">
+          <img src="/Icons/schnellschach.png" alt="Schnellschachturniere">
+          <ul id="schnellschach"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="rotateCarousel(1)">◀</button>
+      <button onclick="rotateCarousel(-1)">▶</button>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>Kontakt:<span class="line-break"> </span><a id="contact-email" href="#"></a></p>
+    </div>
+    <div class="footer-right">
+      <a href="/Sites/impressum.html">Impressum</a>
+    </div>
+  </footer>
+
+  <script src="/Scripts/header.js"></script>
+  <script src="/Scripts/hall.js"></script>
+</body>
+</html>

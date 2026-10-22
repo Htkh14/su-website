@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://schachunion-schorndorf.de/sitemap.xml

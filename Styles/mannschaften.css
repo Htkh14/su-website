@@ -1,0 +1,150 @@
+body {
+    background-color: var(--color-background);
+}
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+}
+.teams-container {
+  margin: 10px 12%;
+}
+.teams-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.teams-heading-container h2 {
+    display: inline-block;
+    margin: 0;
+}
+.placeholder {
+    padding: 10px 20px;
+    margin-left: 20px;
+    opacity: 0;
+    display: inline-block;
+}
+.news-button {
+    font-size: large;
+    padding: 10px 20px;
+    border-style: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.news-button:active {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.news-button:hover {
+    color: var(--color-accent);
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: var(--color-middle-gray);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+.tab.active {
+    background-color: var(--color-light-gray);
+}
+.content-container {
+    background-color: var(--color-light-gray);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    margin: 0 5px;
+    min-height: 800px;
+}
+.tab-content {
+    display: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tab-content h2 a {
+    color: inherit;
+}
+
+.tab-content h2 a:hover {
+    color: var(--color-primary);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--color-background);
+}
+th, td {
+    border: 1px solid var(--color-middle-gray);
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+th {
+    background-color: var(--color-middle-gray);
+}
+.spieler-header {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--color-middle-gray);
+}
+.cross-table td {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .teams-heading-container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .placeholder {
+        display: none;
+    }
+    .news-button {
+        margin-right: 0;
+        margin: 10px 0;
+    }
+    .teams-container {
+      margin: 10px 2%;
+    }
+    .tab-container {
+      flex-direction: column;
+      margin: 0;
+    }
+    .tab {
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+    .content-container {
+      margin: 0;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 3px 5px;
+    }
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}

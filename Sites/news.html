@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <meta name="description" content="Übersicht der neuesten Berichten und Ankündigungen.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Icons/favicon-16x16.png">
+  <link rel="manifest" href="/Icons/site.webmanifest">
+  <link rel="canonical" href="https://schachunion-schorndorf.de/Sites/news.html" />
+  <link rel="stylesheet" href="/Styles/variablen.css">
+  <link rel="stylesheet" href="/Styles/news.css">
+  <link rel="stylesheet" href="/Styles/loader.css">
+  <link rel="stylesheet" href="/Styles/header.css">
+  <link rel="stylesheet" href="/Styles/footer.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <a href="/index.html">
+        <picture>
+          <source srcset="/Icons/headerlogo_dark.png" media="(prefers-color-scheme: dark)">
+          <img src="/Icons/headerlogo.png" alt="Schachunion Schorndorf" class="headerlogo">
+        </picture>
+      </a>
+    </div>
+    <div class="header-right">
+      <nav class="navigation">
+        <button class="menu-button"></button>
+        <ul class="navigation-content">
+          <li class="header-titles"><a href="/Sites/news.html">News</a></li>
+          <li class="header-titles"><a href="/Sites/mannschaften.html">Mannschaften</a></li>
+          <li class="header-titles"><a href="/Sites/turniere.html">Turniere</a></li>
+          <li class="header-titles"><a href="/Sites/verein.html">Verein</a></li>
+          <li class="header-titles"><a href="/Sites/termine.html">Termine</a></li>
+          <li class="menu">
+            <ul>
+              <li><a href="/Sites/hall.html">Hall Of Fame</a></li>
+              <li><a href="/Sites/archiv.html">Archiv</a></li>
+              <li><a href="/Sites/impressum.html">Impressum</a></li>
+              <li><a href="/Sites/extern.html">Externe Links</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="news-header">
+      <h1>News</h1>
+
+      <select name="Filter" id="news-filter">
+        <option value="no-filter">Kein Filter</option>
+        <optgroup label="Turniere">
+          <option value="turniere">Alle Turniere</option>
+          <option value="blitz">Blitz-Turniere</option>
+          <option value="schnellschach">Schnellschach-Turniere</option>
+          <option value="schach960">Schach-960-Turniere</option>
+          <option value="stadtmeisterschaft">Stadtmeisterschaft</option>
+          <option value="vereinspokal">Vereinspokal</option>
+        </optgroup>
+        <optgroup label="Mannschaften">
+          <option value="mannschaften">Alle Mannschaften</option>
+          <option value="1-mannschaft">1. Mannschaft</option>
+          <option value="2-mannschaft">2. Mannschaft</option>
+          <option value="3-mannschaft">3. Mannschaft</option>
+          <option value="4-mannschaft">4. Mannschaft</option>
+        </optgroup>
+      </select>
+    </div>
+    
+
+    <div id="news-list-loader" class="loader-svg">
+      <svg class="container" viewBox="0 0 35 35" height="35" width="35">
+        <rect class="track" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5"/>
+        <rect class="car" x="2.5" y="2.5" fill="none" stroke-width="5px" width="32.5" height="32.5" pathlength="100"/>
+      </svg>
+    </div>
+
+    <div class="pagination">
+      <button class="prevPage">Vorherige</button>
+      <button class="nextPage">Nächste</button>
+    </div>
+
+    <ul id="newsList" class="news-list"></ul>
+
+    <div class="pagination">
+      <button class="prevPage">Vorherige</button>
+      <button class="nextPage">Nächste</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p>Kontakt:<span class="line-break"> </span><a id="contact-email" href="#"></a></p>
+    </div>
+    <div class="footer-right">
+      <a href="/Sites/impressum.html">Impressum</a>
+    </div>
+  </footer>
+  
+  <script src="/Scripts/header.js"></script>
+  <script src="/Scripts/config.js"></script>
+  <script type="module" src="/Scripts/news.js"></script>
+</body>
+</html>

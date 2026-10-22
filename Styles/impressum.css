@@ -1,0 +1,11 @@
+.impressum {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10%;
+}
+
+@media (max-width: 800px) {
+  .impressum {
+    padding: 10px 2%;
+  }
+}

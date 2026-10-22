@@ -1,0 +1,186 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 20px;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.carousel-container {
+  perspective: 1200px;
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card {
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  background-color: var(--color-light-gray);
+  border-radius: 15px;
+  text-align: left;
+  padding: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  color: var(--color-text);
+
+  overflow-y: auto;       /* Scrollbar erscheint bei Überlauf */
+  scrollbar-width: thin;  /* Für Firefox */
+
+  pointer-events: none;
+}
+
+.card.is-active {
+    pointer-events: auto;
+}
+
+.card h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.card li {
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 60%;
+  object-fit: contain;
+}
+
+.card li:nth-child(1),
+.card li:nth-child(2),
+.card li:nth-child(3),
+.card li:nth-child(4) {
+    font-weight: bold;
+}
+
+.year {
+    color: var(--color-dark-gray);
+}
+
+.first {
+    color: var(--color-text);
+}
+
+.second {
+    color: var(--color-text);
+}
+
+.third {
+    color: var(--color-text);
+}
+
+.first::before {
+    content: "🥇 ";
+}
+
+.second::before {
+    content: "🥈 ";
+}
+
+.third::before {
+    content: "🥉 ";
+}
+
+/* Position cards in a 3D circle (6 cards) */
+.card:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px); }
+.card:nth-child(2) { transform: translate(-50%, -50%) rotateY(60deg) translateZ(300px); }
+.card:nth-child(3) { transform: translate(-50%, -50%) rotateY(120deg) translateZ(300px); }
+.card:nth-child(4) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px); }
+.card:nth-child(5) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(300px); }
+.card:nth-child(6) { transform: translate(-50%, -50%) rotateY(300deg) translateZ(300px); }
+
+/* Buttons */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 70px;
+}
+
+.controls button {
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.controls button:hover {
+  color: var(--color-accent);
+}
+
+.controls button:active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Responsive / Mobile version */
+@media (max-width: 500px) {
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .carousel-container {
+    width: 300px;
+    height: 400px;
+    }
+
+    .card {
+    width: 180px;
+    height: 300px;
+    padding: 15px;
+    }
+
+    .card:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px); }
+    .card:nth-child(2) { transform: translate(-50%, -50%) rotateY(60deg) translateZ(200px); }
+    .card:nth-child(3) { transform: translate(-50%, -50%) rotateY(120deg) translateZ(200px); }
+    .card:nth-child(4) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(200px); }
+    .card:nth-child(5) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(200px); }
+    .card:nth-child(6) { transform: translate(-50%, -50%) rotateY(300deg) translateZ(200px); }
+
+    .controls button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    }
+
+    .controls {
+        margin-top: 30px;
+    }
+}
