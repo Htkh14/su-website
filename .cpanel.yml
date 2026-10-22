@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kd53792/public_html
+    - /bin/cp -a Icons Scripts Styles Sites tools $DEPLOYPATH/
+    - /bin/cp -a index.html favicon.ico robots.txt sitemap.xml .htaccess $DEPLOYPATH/
